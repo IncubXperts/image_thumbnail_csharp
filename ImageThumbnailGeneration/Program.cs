@@ -9,6 +9,7 @@ namespace ImageThumbnailGeneration
         {
             Console.WriteLine("This is a thumbnail generation sample code, It generates thumbnail from image");
             // Specify source file of original image and target file where thumbnail image is generated.
+            // Example Photo by Julia M Cameron: https://www.pexels.com/photo/photo-of-boy-using-vr-headset-4145356/  
             string InputImageFile = Environment.CurrentDirectory + "\\temp\\large-image.jpg";
             Console.WriteLine("Generating thumbnail for image file " + InputImageFile);
             string OutputThumbnailImageFile = Environment.CurrentDirectory + "\\temp\\tumb-image.jpg";

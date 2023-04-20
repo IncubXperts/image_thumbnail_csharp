@@ -37,8 +37,6 @@
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -63,8 +61,6 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -108,32 +104,29 @@ This is an example of how to list things you need to use the software and how to
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 ```
-        static void GenerateThumbnailFromFile(string InputImageFile, string OutputThumbnailImageFile)
-        {
-            // Open source file as file stream.
-            using FileStream inputFileStream = new(InputImageFile, FileMode.Open);
-            // Call image thumbnail generator to generate thumnail 
-            using (var thumbnailMemStream = ImageThumbnailGenerator.GenerateThumbnail(inputFileStream, 200, 200))
-            {
-                var outputFileStream = new FileStream(OutputThumbnailImageFile, FileMode.Create, FileAccess.Write);
-                thumbnailMemStream.CopyTo(outputFileStream);
-                outputFileStream.Dispose();
-                thumbnailMemStream.Dispose();
-            }
-            // Close open streams. 
-            inputFileStream.Dispose();
-        }
+static void GenerateThumbnailFromFile(string InputImageFile, string OutputThumbnailImageFile)
+{
+    // Open source file as file stream.
+    using FileStream inputFileStream = new(InputImageFile, FileMode.Open);
+    // Call image thumbnail generator to generate thumnail 
+    using (var thumbnailMemStream = ImageThumbnailGenerator.GenerateThumbnail(inputFileStream, 200, 200))
+    {
+        var outputFileStream = new FileStream(OutputThumbnailImageFile, FileMode.Create, FileAccess.Write);
+        thumbnailMemStream.CopyTo(outputFileStream);
+        outputFileStream.Dispose();
+        thumbnailMemStream.Dispose();
+    }
+    // Close open streams. 
+    inputFileStream.Dispose();
+}
 
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -151,14 +144,12 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the GPL License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- CONTACT -->
 ## Contact
@@ -168,7 +159,6 @@ IncubXperts - [@incubxperts](https://twitter.com/incubxperts) - contact@incubxpe
 Project Link: [https://github.com/IncubXperts/image_thumbnail_csharp](https://github.com/IncubXperts/image_thumbnail_csharp)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments

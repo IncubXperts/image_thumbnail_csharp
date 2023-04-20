@@ -24,7 +24,7 @@
 
 <h3 align="center">Image Thumbnail Generator using C#</h3>
   <p align="center">
-    This is an effort by [IncubXperts](https://incubxperts.com) to provide commonly used source code snippets as open source code to community. Feel free to use it in your projects, suggest improvements, report bugs to improve to code for community.  Feel free to contribute. 
+    This is an effort by [IncubXperts](https://incubxperts.com) to provide commonly used source code snippets as open source code to community. Feel free to use it in your projects, suggest improvements, report bugs to improve the code for community.  Feel free to contribute. 
     <br />
     Source code example to generate a thumbnail from an image.  
     <br />

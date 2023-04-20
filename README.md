@@ -163,7 +163,8 @@ Project Link: [https://github.com/IncubXperts/image_thumbnail_csharp](https://gi
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Developer - Rahul Bagal](https://bagal.in)
+* [IncubXpertsl](https://incubxperts.com)
+* [Example Photo by Julia M Cameron](https://www.pexels.com/photo/photo-of-boy-using-vr-headset-4145356/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

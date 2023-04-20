@@ -57,7 +57,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#Contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -112,16 +112,31 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+```
+        static void GenerateThumbnailFromFile(string InputImageFile, string OutputThumbnailImageFile)
+        {
+            // Open source file as file stream.
+            using FileStream inputFileStream = new(InputImageFile, FileMode.Open);
+            // Call image thumbnail generator to generate thumnail 
+            using (var thumbnailMemStream = ImageThumbnailGenerator.GenerateThumbnail(inputFileStream, 200, 200))
+            {
+                var outputFileStream = new FileStream(OutputThumbnailImageFile, FileMode.Create, FileAccess.Write);
+                thumbnailMemStream.CopyTo(outputFileStream);
+                outputFileStream.Dispose();
+                thumbnailMemStream.Dispose();
+            }
+            // Close open streams. 
+            inputFileStream.Dispose();
+        }
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- CONTRIBUTING -->
-## Contributin
+## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -173,9 +188,9 @@ Project Link: [https://github.com/IncubXperts/image_thumbnail_csharp](https://gi
 [issues-shield]: https://img.shields.io/github/issues/IncubXperts/image_thumbnail_csharp.svg?style=for-the-badge
 [issues-url]: https://github.com/IncubXperts/image_thumbnail_csharp/issues
 [license-shield]: https://img.shields.io/github/license/IncubXperts/image_thumbnail_csharp.svg?style=for-the-badge
-[license-url]: https://github.com/IncubXperts/image_thumbnail_csharp/blob/master/LICENSE.txt
+[license-url]: https://github.com/IncubXperts/image_thumbnail_csharp/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/incubxperts
+[linkedin-url]: https://www.linkedin.com/company/incubxperts
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

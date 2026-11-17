@@ -12,8 +12,8 @@
     <Version>1.0.0</Version>
     <Authors>IncubXperts</Authors>
     <Company>IncubXperts</Company>
-    <Description>Small, dependency-light helper to generate JPEG thumbnails from images (JPEG, PNG, GIF, BMP, WebP, TIFF) while keeping the aspect ratio. Built on SixLabors.ImageSharp.</Description>
-    <PackageTags>thumbnail;image;resize;imagesharp;jpeg</PackageTags>
+    <Description>Small, dependency-light helper to generate JPEG thumbnails from images (JPEG, PNG, GIF, BMP, WebP) while keeping the aspect ratio. Built on SkiaSharp.</Description>
+    <PackageTags>thumbnail;image;resize;skiasharp;jpeg</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/IncubXperts/image_thumbnail_csharp</PackageProjectUrl>
@@ -26,7 +26,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SixLabors.ImageSharp" Version="3.2.0" />
+    <PackageReference Include="SkiaSharp" Version="3.119.2" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="3.119.2" />
     <None Include="PACKAGE_README.md" Pack="true" PackagePath="README.md" />
   </ItemGroup>
 

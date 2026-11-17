@@ -11,13 +11,8 @@ using FileStream output = File.Create("thumb-image.jpg");
 thumbnail.CopyTo(output);
 ```
 
-- Accepts any format supported by ImageSharp (JPEG, PNG, GIF, BMP, WebP, TIFF, ...).
+- Accepts any format supported by SkiaSharp (JPEG, PNG, GIF, BMP, WebP, ...).
 - The thumbnail fits within the given width x height and is never distorted.
-- Output is always JPEG, so transparency is not preserved.
-
-## ImageSharp licensing
-
-This package depends on [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp). Version 3.2.0 and later
-require a [Six Labors license](https://sixlabors.com/pricing/) for Release builds. Check that your use is covered.
+- Output is always JPEG; transparent areas are flattened onto white.
 
 Source and issues: https://github.com/IncubXperts/image_thumbnail_csharp

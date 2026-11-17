@@ -27,10 +27,7 @@ jobs:
       - name: Test
         run: dotnet test ImageThumbnailGeneration.Tests/ImageThumbnailGeneration.Tests.csproj
       - name: Pack (Release)
-        # ImageSharp 3.2+ requires a Six Labors license for Release builds.
-        run: >
-          dotnet pack IncubXperts.ImageThumbnail/IncubXperts.ImageThumbnail.csproj
-          -c Release -o artifacts -p:SixLaborsLicenseKey="${{ secrets.SIXLABORS_LICENSE_KEY }}"
+        run: dotnet pack IncubXperts.ImageThumbnail/IncubXperts.ImageThumbnail.csproj -c Release -o artifacts
       - name: Push to NuGet
         run: >
           dotnet nuget push "artifacts/*.nupkg" --api-key "${{ secrets.NUGET_API_KEY }}"

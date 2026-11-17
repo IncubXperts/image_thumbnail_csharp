@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            6.0.x
+            8.0.x
+      - name: Restore
+        run: dotnet restore ImageThumbnailGeneration.Tests/ImageThumbnailGeneration.Tests.csproj
+      - name: Build
+        run: dotnet build ImageThumbnailGeneration.Tests/ImageThumbnailGeneration.Tests.csproj --no-restore
+      - name: Test
+        run: dotnet test ImageThumbnailGeneration.Tests/ImageThumbnailGeneration.Tests.csproj --no-build
+      - name: Check for vulnerable packages
+        run: |
+          dotnet list ImageThumbnailGeneration/ImageThumbnailGeneration.csproj package --vulnerable --include-transitive | tee vuln.txt
+          if grep -q "has the following vulnerable packages" vuln.txt; then exit 1; fi

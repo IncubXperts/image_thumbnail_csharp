@@ -108,7 +108,10 @@ To get a local copy up and running, follow these steps.
    ```
    dotnet test ../ImageThumbnailGeneration.Tests
    ```
-3. Copy `ImageThumbnail.cs` into your project (add the `SixLabors.ImageSharp` NuGet package) and use as fit.
+3. Or use it as a package in your own project:
+   ```
+   dotnet add package IncubXperts.ImageThumbnail
+   ```
 
 > **Note on ImageSharp licensing:** ImageSharp 3.2.0 and later require a [Six Labors license](https://sixlabors.com/pricing/) for Release builds. Check that your use is covered before shipping.
 
@@ -150,7 +153,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the GNU GPL v3 License. See [`LICENSE`](LICENSE) for more information.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageThumbnailGeneration", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageThumbnailGeneration.Tests", "..\ImageThumbnailGeneration.Tests\ImageThumbnailGeneration.Tests.csproj", "{5A823C8D-A4EB-4FE5-8345-D69974730E24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncubXperts.ImageThumbnail", "..\IncubXperts.ImageThumbnail\IncubXperts.ImageThumbnail.csproj", "{FC36EB2F-1C4A-4730-9B96-A2D4B3EBA1AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5A823C8D-A4EB-4FE5-8345-D69974730E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A823C8D-A4EB-4FE5-8345-D69974730E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A823C8D-A4EB-4FE5-8345-D69974730E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC36EB2F-1C4A-4730-9B96-A2D4B3EBA1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC36EB2F-1C4A-4730-9B96-A2D4B3EBA1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC36EB2F-1C4A-4730-9B96-A2D4B3EBA1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC36EB2F-1C4A-4730-9B96-A2D4B3EBA1AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,5 +26,5 @@ jobs:
         run: dotnet test ImageThumbnailGeneration.Tests/ImageThumbnailGeneration.Tests.csproj --no-build
       - name: Check for vulnerable packages
         run: |
-          dotnet list ImageThumbnailGeneration/ImageThumbnailGeneration.csproj package --vulnerable --include-transitive | tee vuln.txt
+          dotnet list IncubXperts.ImageThumbnail/IncubXperts.ImageThumbnail.csproj package --vulnerable --include-transitive | tee vuln.txt
           if grep -q "has the following vulnerable packages" vuln.txt; then exit 1; fi

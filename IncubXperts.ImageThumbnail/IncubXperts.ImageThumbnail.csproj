@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>ImageThumbnailGeneration</RootNamespace>
+    <AssemblyName>IncubXperts.ImageThumbnail</AssemblyName>
+
+    <!-- NuGet package metadata -->
+    <PackageId>IncubXperts.ImageThumbnail</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>IncubXperts</Authors>
+    <Company>IncubXperts</Company>
+    <Description>Small, dependency-light helper to generate JPEG thumbnails from images (JPEG, PNG, GIF, BMP, WebP, TIFF) while keeping the aspect ratio. Built on SixLabors.ImageSharp.</Description>
+    <PackageTags>thumbnail;image;resize;imagesharp;jpeg</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/IncubXperts/image_thumbnail_csharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/IncubXperts/image_thumbnail_csharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.2.0" />
+    <None Include="PACKAGE_README.md" Pack="true" PackagePath="README.md" />
+  </ItemGroup>
+
+</Project>

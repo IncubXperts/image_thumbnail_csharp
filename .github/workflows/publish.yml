@@ -1,0 +1,34 @@
+name: Publish NuGet package
+
+# Publishes when a version tag is pushed, e.g.:  git tag v1.0.0 && git push origin v1.0.0
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: |
+            6.0.x
+            8.0.x
+      - name: Check tag matches package version
+        run: |
+          VERSION=$(grep -oPm1 '(?<=<Version>)[^<]+' IncubXperts.ImageThumbnail/IncubXperts.ImageThumbnail.csproj)
+          if [ "v$VERSION" != "$GITHUB_REF_NAME" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match <Version>$VERSION</Version>"; exit 1
+          fi
+      - name: Test
+        run: dotnet test ImageThumbnailGeneration.Tests/ImageThumbnailGeneration.Tests.csproj
+      - name: Pack (Release)
+        run: dotnet pack IncubXperts.ImageThumbnail/IncubXperts.ImageThumbnail.csproj -c Release -o artifacts
+      - name: Push to NuGet
+        run: >
+          dotnet nuget push "artifacts/*.nupkg" --api-key "${{ secrets.NUGET_API_KEY }}"
+          --source https://api.nuget.org/v3/index.json --skip-duplicate
